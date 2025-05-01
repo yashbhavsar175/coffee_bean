@@ -1,0 +1,436 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./index.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.19/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        container: {
+          center: true,
+          padding: '2rem',
+        },
+        extend: {
+          backgroundImage: {
+            'hero-section': "url('./src/img/bg-image.png')",
+            'coffee-icon': "url('./src/img/coffee-icon-bg.png')",
+            'footer-coffee' : "url('./src/img/footer_bg.png')",
+          },
+        },
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div class="bg-hero-section bg-center bg-no-repeat bg-cover">
+    <!-- nav start  -->
+    <div class="flex justify-between items-center pt-5 px-4 md:px-8">
+        <!-- Logo -->
+        <img src="./src/img/logo_coffe.svg" alt="Logo" class="h-8 md:h-10">
+      
+        <!-- Hamburger Menu Icon -->
+        <button
+          class="md:hidden flex items-center focus:outline-none"
+          onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+        >
+          <img src="./src/img/menu_icon.svg" alt="Menu" class="h-6 w-6">
+        </button>
+      
+        <!-- Navigation Links -->
+        <div class="hidden md:flex space-x-8 text-sm">
+          <a href="#" class="hover:text-gray-700">About Us</a>
+          <a href="#" class="hover:text-gray-700">Our Product</a>
+          <a href="#" class="hover:text-gray-700">Delivery</a>
+        </div>
+      
+        <!-- Search and Cart Section -->
+        <div class="flex items-center gap-4">
+          <!-- Search Bar -->
+          <div class="relative">
+            <div class="absolute inset-y-0 flex items-center ps-3 pointer-events-none">
+              <img src="./src/img/Vector.png" alt="Search" width="15">
+              <span class="sr-only">Search icon</span>
+            </div>
+            <input
+              type="text"
+              id="search-navbar"
+              placeholder="Cappuccino"
+              class="block w-36 md:w-48 py-2 ps-10 text-sm rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400"
+            >
+          </div>
+          <!-- Cart Icon -->
+          <img src="./src/img/icons_cart.png" alt="Cart" class="h-6 w-6 hover:cursor-pointer">
+        </div>
+      
+        <!-- Mobile Menu -->
+        <div
+          id="mobile-menu"
+          class="absolute top-full left-0 w-full bg-white shadow-md hidden md:hidden flex-col items-center text-center space-y-4 py-4"
+        >
+          <a href="#" class="hover:text-gray-700">About Us</a>
+          <a href="#" class="hover:text-gray-700">Our Product</a>
+          <a href="#" class="hover:text-gray-700">Delivery</a>
+        </div>
+      </div>
+      </div>
+    <!-- nav end  -->
+    <!-- hero content start -->
+    <div class="mt-32 container mx-auto px-4 flex flex-col md:flex-row items-center justify-around space-y-10 md:space-y-0">
+        <!-- Text Section -->
+        <div class="text-center md:text-left">
+          <h1 class="font-bold text-3xl md:text-5xl leading-snug">
+            Enjoy your <span class="text-[#FF902B]">coffee</span><br>before your activity
+          </h1>
+          <p class="mt-5 opacity-70 text-lg md:text-2xl leading-relaxed">
+            Boost your productivity and build your<br>mood with a glass of coffee in the morning
+          </p>
+          <div class="mt-10 flex flex-col md:flex-row items-center md:justify-start md:w-auto space-y-4 md:space-y-0 md:space-x-6">
+            <!-- Order Now Button -->
+            <a
+              href="#"
+              class="bg-[#2F2105] text-white rounded-full py-3 px-6 font-semibold text-xs flex items-center gap-3 hover:bg-[#FF902B] transition duration-300"
+            >
+              Order now
+              <img src="./src/img/Group 2.png" alt="">
+            </a>
+            <!-- More Menu -->
+            <p class="text-sm text-[#FF902B] font-bold">More menu</p>
+          </div>
+        </div>
+      
+        <!-- Image Section -->
+        <div class="flex justify-center">
+          <img src="./src/img/img-hero.png" alt="Hero Coffee" class="w-full max-w-md md:max-w-lg">
+        </div>
+      </div>
+      
+    <!-- hero section end -->
+    <div class="container mx-auto mt-20 px-4">
+        <!-- Title Section -->
+        <h1 class="text-3xl font-bold text-center">
+          Popular <u class="decoration-[#F9D9AA]">Now</u>
+        </h1>
+      
+        <!-- Decorative Image -->
+        <div class="relative mt-10 flex justify-center">
+          <img src="./src/img/Rectangle.png" alt="Decoration" class="absolute top-0 left-1/2 transform -translate-x-1/2">
+        </div>
+      
+        <!-- Coffee Cards Section -->
+        <div class="flex flex-col md:flex-row gap-12 justify-center mt-20">
+          <!-- Coffee Card 1 -->
+          <div class="bg-white bg-opacity-50 p-2 rounded-2xl">
+            <div class="bg-white p-5 rounded-2xl shadow-2xl">
+              <div>
+                <img src="./src/img/Coffee1.png" class="rounded-2xl" alt="Vanilla Latte" width="307">
+              </div>
+              <div class="px-6">
+                <div class="flex justify-between pt-3">
+                  <p class="font-bold text-xl md:text-2xl">Vanilla Latte</p>
+                  <p class="font-bold text-xl md:text-2xl">21 k</p>
+                </div>
+                <div class="flex items-center justify-between pt-4">
+                  <div class="flex gap-3">
+                    <a href="#" class="text-[#F9D9AA] border border-[#F9D9AA] px-3 py-1 rounded-lg">Hot</a>
+                    <a href="#" class="text-[#F9D9AA] border border-[#F9D9AA] px-3 py-1 rounded-lg">Cold</a>
+                  </div>
+                  <div>
+                    <a href="#"><img src="./src/img/Frame 5.png" alt="Add to Cart" width="35"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Coffee Card 2 -->
+          <div class="bg-white bg-opacity-50 p-2 rounded-2xl">
+            <div class="bg-white p-5 rounded-2xl shadow-2xl">
+              <div>
+                <img src="./src/img/Coffee2.png" class="rounded-2xl" alt="Espresso" width="307">
+              </div>
+              <div class="px-6">
+                <div class="flex justify-between pt-3">
+                  <p class="font-bold text-xl md:text-2xl">Espresso</p>
+                  <p class="font-bold text-xl md:text-2xl">12 k</p>
+                </div>
+                <div class="flex items-center justify-between pt-4">
+                  <div class="flex gap-3">
+                    <a href="#" class="text-[#F9D9AA] border border-[#F9D9AA] px-3 py-1 rounded-lg">Hot</a>
+                    <a href="#" class="text-[#F9D9AA] border border-[#F9D9AA] px-3 py-1 rounded-lg">Cold</a>
+                  </div>
+                  <div>
+                    <a href="#"><img src="./src/img/Frame 5.png" alt="Add to Cart" width="35"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Coffee Card 3 -->
+          <div class="bg-white bg-opacity-50 p-2 rounded-2xl">
+            <div class="bg-white p-5 rounded-2xl shadow-2xl">
+              <div>
+                <img src="./src/img/Coffee3.png" class="rounded-2xl" alt="Hazelnut Latte" width="307">
+              </div>
+              <div class="px-6">
+                <div class="flex justify-between pt-3">
+                  <p class="font-bold text-xl md:text-2xl">Hazelnut Latte</p>
+                  <p class="font-bold text-xl md:text-2xl">23 k</p>
+                </div>
+                <div class="flex items-center justify-between pt-4">
+                  <div class="flex gap-3">
+                    <a href="#" class="text-[#F9D9AA] border border-[#F9D9AA] px-3 py-1 rounded-lg">Hot</a>
+                    <a href="#" class="text-[#F9D9AA] border border-[#F9D9AA] px-3 py-1 rounded-lg">Cold</a>
+                  </div>
+                  <div>
+                    <a href="#"><img src="./src/img/Frame 5.png" alt="Add to Cart" width="35"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="mt-40">
+        <!-- Title Section -->
+        <div class="container mx-auto text-center px-4">
+          <h2 class="text-3xl font-bold">
+            How to use delivery <u class="decoration-[#F9D9AA]">service</u>
+          </h2>
+        </div>
+      
+        <!-- Steps Section -->
+        <div class="flex flex-col md:flex-row container mx-auto gap-16 justify-center items-center mt-16 px-4">
+          <!-- Step 1 -->
+          <div class="flex flex-col justify-center items-center text-center">
+            <img src="./src/img/coffeewithhand.png" alt="Choose your coffee" class="w-40 md:w-48">
+            <h1 class="font-bold text-lg md:text-xl mt-4 tracking-wide">Choose your coffee</h1>
+            <p class="font-semibold text-sm md:text-base tracking-wide">There are 20+ coffees for you</p>
+          </div>
+      
+          <!-- Step 2 -->
+          <div class="flex flex-col justify-center items-center text-center">
+            <img src="./src/img/food-truck 1.png" alt="We deliver it to you" class="w-40 md:w-48">
+            <h1 class="font-bold text-lg md:text-xl mt-4 tracking-wide">We deliver it to you</h1>
+            <p class="font-semibold text-sm md:text-base tracking-wide">Choose delivery service</p>
+          </div>
+      
+          <!-- Step 3 -->
+          <div class="flex flex-col justify-center items-center text-center">
+            <img src="./src/img/coffee-cup 2.png" alt="Enjoy your coffee" class="w-40 md:w-48">
+            <h1 class="font-bold text-lg md:text-xl mt-4 tracking-wide">Enjoy your coffee</h1>
+            <p class="font-semibold text-sm md:text-base tracking-wide">Choose delivery service</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-60 w-full">
+        <!-- Background Section -->
+        <div class="bg-coffee-icon bg-center bg-no-repeat bg-cover flex flex-col lg:flex-row items-center px-4 lg:px-16 py-10">
+          <!-- Image Section -->
+          <div class="w-full lg:w-1/2 flex justify-center lg:justify-end mb-8 lg:mb-0">
+            <img src="./src/img/unsplash_3n3mPoGko8g.png" alt="Coffee" class="w-64 lg:w-80 relative -top-10">
+          </div>
+          <!-- Text Section -->
+          <div class="w-full lg:w-1/2 text-center lg:text-left">
+            <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">About Us</h2>
+            <h3 class="text-lg lg:text-xl font-semibold text-gray-700 mb-2">
+              We provide quality coffee, <br class="hidden lg:block"> and are ready to deliver.
+            </h3>
+            <p class="text-gray-600 mb-6 max-w-lg mx-auto lg:mx-0 opacity-75">
+              We are a company that makes and distributes delicious drinks. Our main product is made with a secret recipe
+              and is available in stores worldwide.
+            </p>
+            <a href="#" class="bg-[#2F2105] text-[#F4AE26] font-semibold text-sm lg:text-base rounded-full py-2 px-6 shadow-md hover:bg-[#422A08]">
+              Get your coffee
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="container mx-auto mt-32">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl font-bold">Special Menu <u class="decoration-[#F9D9AA]">For You</u></h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center">
+          <!-- Menu Item 1 -->
+          <div class="bg-white p-5 rounded-2xl shadow-2xl w-80">
+            <div>
+              <img src="./src/img/Sandwich.png" class="rounded-2xl w-full" alt="Sandwich">
+            </div>
+            <div class="px-4">
+              <div class="flex justify-between pt-3">
+                <p class="font-bold text-xl">Sandwich</p>
+                <p class="font-bold text-xl">12 k</p>
+              </div>
+              <div class="flex items-center justify-between pt-4">
+                <p class="opacity-60 text-sm">Bread with meat and vegetables</p>
+                <a href="#"><img src="./src/img/Frame 5.png" alt="Add to Cart" width="35"></a>
+              </div>
+            </div>
+          </div>
+          <!-- Menu Item 2 -->
+          <div class="bg-white p-5 rounded-2xl shadow-2xl w-80">
+            <div>
+              <img src="./src/img/Hot Milk.png" class="rounded-2xl w-full" alt="Hot Milk">
+            </div>
+            <div class="px-4">
+              <div class="flex justify-between pt-3">
+                <p class="font-bold text-xl">Hot Milk</p>
+                <p class="font-bold text-xl">12 k</p>
+              </div>
+              <div class="flex items-center justify-between pt-4">
+                <p class="opacity-60 text-sm">Hot Milk with less sugar</p>
+                <a href="#"><img src="./src/img/Frame 5.png" alt="Add to Cart" width="35"></a>
+              </div>
+            </div>
+          </div>
+          <!-- Menu Item 3 -->
+          <div class="bg-white p-5 rounded-2xl shadow-2xl w-80">
+            <div>
+              <img src="./src/img/Coffe Ice Cream.png" class="rounded-2xl w-full" alt="Coffee Ice Cream">
+            </div>
+            <div class="px-4">
+              <div class="flex justify-between pt-3">
+                <p class="font-bold text-xl">Coffee Ice Cream</p>
+                <p class="font-bold text-xl">12 k</p>
+              </div>
+              <div class="flex items-center justify-between pt-4">
+                <p class="opacity-60 text-sm">Coffee with ice cream vanilla</p>
+                <a href="#"><img src="./src/img/Frame 5.png" alt="Add to Cart" width="35"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="container mx-auto mt-10">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl font-bold">Special Menu <u class="decoration-[#F9D9AA]">For You</u></h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center mb-32">
+          <!-- Menu Item 1: Cappuccino -->
+          <div class="bg-white p-5 rounded-2xl shadow-2xl w-80">
+            <div>
+              <img src="./src/img/Cappucino.png" class="rounded-2xl w-full" alt="Cappuccino">
+            </div>
+            <div class="px-4">
+              <div class="flex justify-between pt-3">
+                <p class="font-bold text-xl">Cappuccino</p>
+                <p class="font-bold text-xl">12 k</p>
+              </div>
+              <div class="flex items-center justify-between pt-4">
+                <p class="opacity-60 text-sm">Hot Cappuccino</p>
+                <a href="#"><img src="./src/img/Frame 5.png" alt="Add to Cart" width="35"></a>
+              </div>
+            </div>
+          </div>
+          <!-- Menu Item 2: Moccacinno -->
+          <div class="bg-white p-5 rounded-2xl shadow-2xl w-80">
+            <div>
+              <img src="./src/img/Moccacinno.png" class="rounded-2xl w-full" alt="Moccacinno">
+            </div>
+            <div class="px-4">
+              <div class="flex justify-between pt-3">
+                <p class="font-bold text-xl">Moccacinno</p>
+                <p class="font-bold text-xl">12 k</p>
+              </div>
+              <div class="flex items-center justify-between pt-4">
+                <p class="opacity-60 text-sm">Hot Moccacino</p>
+                <a href="#"><img src="./src/img/Frame 5.png" alt="Add to Cart" width="35"></a>
+              </div>
+            </div>
+          </div>
+          <!-- Menu Item 3: Waffle Ice Cream -->
+          <div class="bg-white p-5 rounded-2xl shadow-2xl w-80">
+            <div>
+              <img src="./src/img/Waffle-Ice-Crem.png" class="rounded-2xl w-full" alt="Waffle Ice Cream">
+            </div>
+            <div class="px-4">
+              <div class="flex justify-between pt-3">
+                <p class="font-bold text-xl">Waffle Ice Cream</p>
+                <p class="font-bold text-xl">12 k</p>
+              </div>
+              <div class="flex items-center justify-between pt-4">
+                <p class="opacity-60 text-sm">Waffle with Ice Cream</p>
+                <a href="#"><img src="./src/img/Frame 5.png" alt="Add to Cart" width="35"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bg-coffee-icon bg-cover bg-no-repeat py-20">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-10">
+            <h1 class="font-bold text-3xl mb-4">What they say about us</h1>
+            <p class="text-gray-700 max-w-md mx-auto opacity-70">
+              We always provide the best service and always maintain the quality of coffee.
+            </p>
+          </div>
+          <div class="flex flex-col lg:flex-row justify-center gap-16">
+            <!-- Testimonial 1 -->
+            <div class="relative">
+              <img src="/Coffee Bean/src/img/Naura.png" alt="Naura" class="rounded-full w-32 h-32 mx-auto">
+              <div class="bg-[#FFD390] rounded-lg p-4 shadow-lg absolute -bottom-10 left-1/2 transform -translate-x-1/2 w-64">
+                <h1 class="font-semibold text-lg text-center">Naura</h1>
+                <p class="text-gray-700 text-sm text-center">
+                  I really love the cappuccino, the coffee was very smooth.
+                </p>
+              </div>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="relative">
+              <img src="/Coffee Bean/src/img/John.png" alt="John" class="rounded-full w-32 h-32 mx-auto">
+              <div class="bg-[#FFD390] rounded-lg p-4 shadow-lg absolute -bottom-10 left-1/2 transform -translate-x-1/2 w-64">
+                <h1 class="font-semibold text-lg text-center">John</h1>
+                <p class="text-gray-700 text-sm text-center">
+                  This coffee shop is very convenient.
+                </p>
+              </div>
+            </div>
+            <!-- Testimonial 3 -->
+            <div class="relative">
+              <img src="/Coffee Bean/src/img/Azura.png" alt="Azura" class="rounded-full w-32 h-32 mx-auto">
+              <div class="bg-[#FFD390] rounded-lg p-4 shadow-lg absolute -bottom-10 left-1/2 transform -translate-x-1/2 w-64">
+                <h1 class="font-semibold text-lg text-center">Azura</h1>
+                <p class="text-gray-700 text-sm text-center">
+                  The coffee menu here has a lot of variety.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bg-footer-coffee bg-cover bg-center py-20 mt-32 mb-10 rounded-full">
+        <div class="container mx-auto flex flex-col items-center px-4 text-center">
+          <h1 class="text-white font-semibold text-3xl mb-6">
+            Subscribe to get a 50% discount price
+          </h1>
+          <div class="flex flex-col sm:flex-row items-center bg-gray-100 rounded-full px-4 py-3 shadow-lg max-w-lg w-full">
+            <input
+              type="email"
+              placeholder="Email address"
+              class="bg-transparent text-gray-700 placeholder-gray-500 outline-none flex-grow px-4 py-2"
+              aria-label="Email address"
+            />
+            <button
+              class="bg-[#4A352A] text-white rounded-full px-6 py-2 mt-3 sm:mt-0 sm:ml-4 hover:bg-[#3B291F] transition duration-300"
+            >
+              Subscribe Now
+            </button>
+          </div>
+        </div>
+      </div>
+      
+</body>
+</html>
